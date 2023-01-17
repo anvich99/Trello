@@ -1,0 +1,24 @@
+{
+  "name": "trello",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anvich99/Trello.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anvich99/Trello/issues"
+  },
+  "homepage": "https://github.com/anvich99/Trello#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2",
+    "sass": "^1.57.1"
+  }
+}
