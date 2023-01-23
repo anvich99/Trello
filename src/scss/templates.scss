@@ -1,0 +1,33 @@
+.styleColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31%;
+    height: 800px;
+    background-color: #E3E4E6;
+    border-radius: 17px;
+    border: 2px solid #a8a9ac;
+    border-top: 0;
+}
+
+.colorBtnHeaderDone{
+    background-color: #f7dcb5;
+    border: 2px solid #ffc87b;
+}
+
+.colorBtnHeaderTodo{
+    background-color: #E4C1FF;
+    border: 2px solid #c78ff1;
+}
+
+.colorHeaerInProrgess{
+    background-color: #98f8d8;
+    border: 2px solid #37eeb1;
+}
+
+.BtnHoverActive{
+    box-shadow: 0px 5px 26px -1px rgba(11, 18, 249, 0.5);
+    cursor: default;
+    transition: all 0.7s ease;
+}
+

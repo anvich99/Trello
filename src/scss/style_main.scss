@@ -1,0 +1,100 @@
+@import "templates.scss";
+
+.body{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.main-trello{
+    width: 100%;
+}
+
+.main-trello-container{
+    font-family: 'Roboto';
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.main-trello-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.main-trello-column-todo{
+    @extend .styleColumn;
+    border-bottom: 0;
+}
+
+.main-trello-column-header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__title{
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 25px;
+        padding-left: 25px;
+        margin: 0;
+    }
+    &__all-number{
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 25px;
+        padding-right: 35px;
+        margin: 0;
+    }
+}
+
+.todo-header{
+    width: 100%;
+    @extend.colorBtnHeaderTodo;
+    border-radius: 17px;
+}
+
+.main-trello-column-todo-button-add{
+    @extend .colorBtnHeaderTodo;
+}
+
+.button{
+    width: 100%;
+    height: 80px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 80px;
+    border-radius: 17px;
+    text-align: center;
+    &:hover{
+        @extend.BtnHoverActive;
+    }
+    &:active{
+        @extend.BtnHoverActive;
+    }
+}
+
+.main-trello-column-in-prorgess{
+    @extend.styleColumn;
+}
+
+.in-prorgess-header{
+    width: 100%;
+    border-radius: 17px;
+    @extend.colorHeaerInProrgess;
+}
+
+.main-trello-column-done{
+    @extend.styleColumn;
+    border-bottom: 0;
+}
+
+.done-header{
+    width: 100%;
+    @extend.colorBtnHeaderDone;
+    border-radius: 17px;
+}
+
+.main-trello-column-button-del{
+    @extend.colorBtnHeaderDone;
+}
