@@ -1,0 +1,148 @@
+@import "templates.scss";
+
+.body{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.main-trello{
+    width: 100%;
+}
+
+.main-trello-container{
+    font-family: 'Roboto';
+    max-width: 1250px;
+    margin: 0 auto;
+    @media screen and (max-width: 1025px){
+        width: 100%;
+    }
+}
+
+.main-trello-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 1025px){
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+    // @media screen and (max-width: 700px){
+    //     flex-direction: column;
+    //     align-content: center;
+    // }
+}
+
+.main-trello-column-todo{
+    @extend.style-Column;
+    @media screen and (max-width: 1025px){
+        margin-bottom: 35px;
+    }
+}
+
+.main-trello-column-in-progress{
+    @extend.style-Column;
+    @media screen and (max-width: 1025px){
+        margin-bottom: 35px;
+    }
+}
+
+.main-trello-column-done{
+    @extend.style-Column;
+}
+
+.main-trello-column-header{
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__title{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 17px;
+        margin: 0;
+    }
+    &__all-number{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 17px;
+        margin: 0;
+    }
+}
+
+.todo-header{
+    @extend.style-Header;
+    background-color: #1C5A7C;
+}
+
+.in-progress-header{
+    @extend.style-Header;
+    background-color:  #106354;
+}
+
+.done-header{
+    @extend.style-Header;
+    background-color: #71441B;
+}
+
+.main-trello-column-todo-button-add{
+    &:hover{
+        background-color: #1C5A7C;
+        @extend.btn-Hover-Active;
+    }
+    &:active{
+        background-color: #1C5A7C;
+        @extend.btn-Hover-Active;
+    }
+}
+
+.main-trello-column-in-progress-button-add{
+    &:hover{
+        background-color:#106354;
+        @extend.btn-Hover-Active;
+    }
+    &:active{
+        background-color:#106354;
+        @extend.btn-Hover-Active;
+    }
+}
+
+.main-trello-column-button-del{
+    &:hover{
+        background-color:#71441B;
+        @extend.btn-Hover-Active;
+    }
+    &:active{
+        background-color:#71441B;
+        @extend.btn-Hover-Active;
+    }
+}
+
+.button{
+    width: 100%;
+    height: 60px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 60px;
+    color: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    @media screen and (max-width: 750px){
+        height: 50px;
+        line-height: 50px;
+    }
+    @media screen and (max-width: 550px){
+        font-size: 18px;
+    }
+}
+
+.main-list-items-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+

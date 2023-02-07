@@ -1,0 +1,52 @@
+.style-Column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    width: 31%;
+    background-color: rgba(248,248,249, 0.4);
+    border-radius: 4px;
+    @media screen and (max-width: 1025px){
+        width: 45%;
+    }
+    @media screen and (max-width: 850px){
+        width: 53%;
+    }
+    @media screen and (max-width: 700px){
+        width: 60%;
+    }
+    @media screen and (max-width: 650px){
+        width: 65%;
+    }
+    @media screen and (max-width: 600px){
+        width: 70%;
+    }
+    @media screen and (max-width: 550px){
+        width: 75%;
+    }
+    @media screen and (max-width: 500px){
+        width: 80%;
+    }
+    @media screen and (max-width: 450px){
+        width: 90%;
+    }
+    @media screen and (max-width: 400px){
+        width: 95%;
+    }
+    @media screen and (max-width: 350px){
+        width: 100%;
+    }
+}
+
+.btn-Hover-Active{
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.style-Header{
+    padding: 10px 20px; 
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
