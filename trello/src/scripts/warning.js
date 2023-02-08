@@ -18,12 +18,7 @@ export function showWarning() {
     cancelButton.addEventListener("click", () => {
       modalContainer.remove();
     });
-    // const confirmButton = document.createElement("button");
-    // confirmButton.classList.add("warning-block-btns__confirm");
-    // confirmButton.textContent = "Confirm";
-    // confirmButton.addEventListener("click", () => {
-    //   modalContainer.remove();
-    // });
+
     modalContent.appendChild(modalButton);
     modalButton.appendChild(cancelButton);
     modalButton.appendChild(confirmButton);

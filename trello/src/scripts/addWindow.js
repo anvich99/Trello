@@ -4,11 +4,6 @@ import svg_del from 'bundle-text:../img/trash.svg';
 import svg_edit from 'bundle-text:../img/pencil.svg';
 import { counterAll } from './board';
 
-// const date = document.querySelector('.popup-date__input');
-
-//import board from './board.js'
-
-// console.log(board(container))
 const trello = function(containerNode) {
     const container = containerNode
 
@@ -343,8 +338,6 @@ const trello = function(containerNode) {
             });
 
             ////перемещение в другой столбец
-            // for (let j=0; j<lists.length; j++){
-            //     const list = lists[j];
             lists.forEach(list => {
                 list.addEventListener('dragover', e =>  e.preventDefault());
                 list.addEventListener('dragenter',  function (e){
@@ -364,27 +357,17 @@ const trello = function(containerNode) {
                         draggeaItem.children[0].style.background = '#1C5A7C';
                         if (this.classList[1] === 'two') {draggeaItem.children[0].style.background = '#106354'; saveTodoAfterDrag(draggeaItem, 'progress')};
                         if (this.classList[1] === 'three') {draggeaItem.children[0].style.background = '#71441B'; saveTodoAfterDrag(draggeaItem, 'done')};
-
-                        // saveTodoAfterDrag(draggeaItem, 'todo')
-                        console.log('raz')
-
                     }else if(document.querySelector('.two') === draggeaItem.parentNode){
                         this.style.backgroundColor = 'rgba(0,0,0,0)';
                         draggeaItem.children[0].style.background = '#106354'
                         if (this.classList[1] === 'one') {draggeaItem.children[0].style.background = '#1C5A7C'; saveTodoAfterDrag(draggeaItem, 'todo')};
                         if (this.classList[1] === 'three') {draggeaItem.children[0].style.background = '#71441B'; saveTodoAfterDrag(draggeaItem, 'done')};
 
-                        // saveTodoAfterDrag(draggeaItem, 'progress')
-                        console.log('dva')
-
                     }else if(document.querySelector('.three') === draggeaItem.parentNode){
                         this.style.backgroundColor = 'rgba(0,0,0,0)';
                         draggeaItem.children[0].style.background = '#71441B'
                         if (this.classList[1] === 'one') {draggeaItem.children[0].style.background = '#1C5A7C'; saveTodoAfterDrag(draggeaItem, 'todo')};
                         if (this.classList[1] === 'two') {draggeaItem.children[0].style.background = '#106354'; saveTodoAfterDrag(draggeaItem, 'progress')};
-
-                        // saveTodoAfterDrag(draggeaItem, 'done')
-                        console.log('tri')
                     }
                     this.append(draggeaItem);
                     counterAll ()
@@ -403,8 +386,6 @@ const trello = function(containerNode) {
 
         const todo = findTodo[0];
 
-        //const column = item.closest('.column-js')
-        //const popupFlag = column.dataset.flag
         const popups = document.querySelectorAll('.popup')
         
         popups.forEach(item => {
@@ -422,14 +403,6 @@ const trello = function(containerNode) {
                 store.todos[i]['flag'] = popupFlag
             }
         }
-        
-        /*
-        store.todos.forEach(todo => {
-            if(+todo.id === taskId)
-            {
-                todo.flag = popupFlag
-            }
-        })*/
         saveToLocalStorage()
     }
     
@@ -462,12 +435,10 @@ const trello = function(containerNode) {
 
             const cardContent = document.createElement('div');
             cardContent.classList.add('main-list-items-content');
-            // cardContent.append(itemToDO);
 
             const headerItem = document.createElement('div');
             headerItem.classList.add('main-list-items-task-header');
             cardsTodo.append(headerItem);
-            // cardsTodo.append(headerItem);
     
             const titleItemToDO = document.createElement('h4');
             titleItemToDO.classList.add('items-task__title');
@@ -509,7 +480,6 @@ const trello = function(containerNode) {
             dateItem.dataset.date = todo.id
             dateItem.innerText = todo.date;
 
-            //infoItem.append(dateItem)
             const usersItem = document.createElement('div');
             usersItem.classList.add('items-task-info__user');
             infoItem.append(dateItem, usersItem);
@@ -562,8 +532,6 @@ const trello = function(containerNode) {
         popupUsersWrap.append(popupUsersItem)
     }
     const renderMembers = function(membersId, cardMembersWrap, popupUsersWrap) {
-        //const arrMembers = store.members.slice(0, 3)
-
         for(let i = 0; i < store.members.length; i++){
             renderMember(store.members[i], popupUsersWrap)
             if(membersId.includes(store.members[i].id)){
@@ -619,7 +587,6 @@ const trello = function(containerNode) {
                     descriptionNode.textContent = description.value 
                     const dateNode = document.querySelector('.items-task-info__date[data-date="'+id+'"');
                     dateNode.textContent = date.textContent 
-
                     const todo = {
                         id: id,
                         title: title.value,
@@ -627,14 +594,12 @@ const trello = function(containerNode) {
                         description: description.value,
                         memberID: [],
                         flag: column,
-                    }
-                    
+                    }   
                     const memberIds = [];
                     membersNode.forEach(item => {
                         memberIds.push(+item.dataset.id)
                     })
                     todo.memberID = memberIds;
-
                     for(let i = 0; i < store.todos.length; i++){
                         if(store.todos[i].id == todo.id){
                             store.todos[i] = todo
@@ -720,7 +685,5 @@ const trello = function(containerNode) {
  
     init();
 }
-
-// trello()
 
 export default trello;

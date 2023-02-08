@@ -164,30 +164,6 @@ function board(container) {
         showWarning();
     }
     });
-
-    // columnTodoBtnAdd.addEventListener('click', ()=>{
-    //     const testDiv = document.createElement('div');
-    //     testDiv.classList.add('todoModals')
-    //     // testDiv.classList.add('view')
-    //     container.prepend(testDiv);
-    //     //trello();
-    // })
-    
-    // columnInProrgessBtnAdd.addEventListener('click', ()=>{
-    //     const testDiv = document.createElement('div');
-    //     testDiv.classList.add('todoModals')
-    //     // testDiv.classList.add('view')
-    //     container.prepend(testDiv);
-    //     renderTest('progress');
-    // })
-    
-    // columnDoneBtnDel.addEventListener('click', ()=>{
-    //     const testDiv = document.createElement('div');
-    //     testDiv.classList.add('todoModals')
-    //     // testDiv.classList.add('view')
-    //     container.prepend(testDiv);
-    //     renderTest('done');
-    // })
     counterAll()
 }
 

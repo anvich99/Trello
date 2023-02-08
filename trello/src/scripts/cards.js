@@ -1,6 +1,5 @@
 'use strict'
-// import { container } from './script';
-// import renderTest from './test';
+
 import svg_del from 'bundle-text:../img/trash.svg';
 import svg_edit from 'bundle-text:../img/pencil.svg';
 
@@ -19,12 +18,10 @@ function renderProgress(title, description, user, data, flag){
 
         const cardContent = document.createElement('div');
         cardContent.classList.add('main-list-items-content');
-        // cardContent.append(itemToDO);
         
         const headerItem = document.createElement('div');
         headerItem.classList.add('main-list-items-task-header');
         cardContent.append(headerItem);
-        // cardsTodo.append(headerItem);
 
         const titleItemToDO = document.createElement('h4');
         titleItemToDO.classList.add('items-task__title');
@@ -121,7 +118,6 @@ function renderProgress(title, description, user, data, flag){
         cardsInProgress.append(itemProgress);
     }else {
         const cardsDone = document.querySelector('.three');
-        // console.log(renderTest.todos['task']['titleTask'])
 
         const itemDone = document.createElement('li');
         itemDone.classList.add('main-list-items-task');
@@ -180,7 +176,6 @@ function renderProgress(title, description, user, data, flag){
         cardsDone.append(itemDone);
     }  
     dargAndDrop ()
-    // counterAll ()
 }
 function getTasks(){
     const todos = JSON.parse(localStorage.getItem('tasks'))
@@ -189,18 +184,11 @@ function cardEdit(btn, flag){
     btn.addEventListener('click', ()=>{
         const testDiv = document.createElement('div');
         testDiv.classList.add('todoModals')
-        // testDiv.classList.add('view')
         container.prepend(testDiv);
         renderTest(flag, flag);
 
     })
 }
-
-// function counterAll (){
-//     columnTodoAllNumber.innerHTML = `${itemListToDO.childNodes.length}`;
-//     columnInProrgessAllNumber.innerHTML= `${itemListProgress.childNodes.length}`;
-//     columnDoneAllNumber.innerHTML= `${itemListDone.childNodes.length}`;
-// }
 
 let draggeaItem = null;
 function dargAndDrop (){
@@ -259,13 +247,3 @@ function dargAndDrop (){
     }
 }
 
-
-
-//export default renderProgress
-//////всего задач в столбце  //// Катя - для подстчета кол-ва - доработаю
-// function coutenterAll (){
-//     columnTodoAllNumber.innerHTML = `${itemListToDO.childNodes.length}`;
-//     columnInProrgessAllNumber.innerHTML= `${itemListToDO.childNodes.length}`;
-//     columnDoneAllNumber.innerHTML= `${itemListToDO.childNodes.length}`;
-// }
-// coutenterAll ()

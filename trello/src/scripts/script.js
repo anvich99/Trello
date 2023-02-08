@@ -3,7 +3,6 @@
 import trello from './addWindow.js';
 import {board} from './board.js'
 import header from './header.js'
-// import back_2 from '../img/back_2.svg';
 
 const content = document.getElementById('trello');  
 content.classList.add('trello');
@@ -30,4 +29,3 @@ document.body.addEventListener('click', (e) => {
 header(container);
 board(container);
 trello(container)
-// export {container};
